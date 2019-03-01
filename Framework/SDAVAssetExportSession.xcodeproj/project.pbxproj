@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		17792E8622291B7000B80642 /* SDAVAssetExportSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 17792E8522291B7000B80642 /* SDAVAssetExportSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		17B38E30222918D70019707B /* SDAVAssetExportSessionFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 17B38E29222918D60019707B /* SDAVAssetExportSessionFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17A1D9A422291DA70020AD50 /* SDAVAssetExportSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 17792E8322291B6900B80642 /* SDAVAssetExportSession.m */; };
+		17A1D9AA22291E890020AD50 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A1D9A922291E890020AD50 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		17792E8322291B6900B80642 /* SDAVAssetExportSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SDAVAssetExportSession.m; path = ../../SDAVAssetExportSession.m; sourceTree = "<group>"; };
-		17792E8522291B7000B80642 /* SDAVAssetExportSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDAVAssetExportSession.h; path = ../../SDAVAssetExportSession.h; sourceTree = "<group>"; };
+		17792E8322291B6900B80642 /* SDAVAssetExportSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SDAVAssetExportSession.m; path = ../SDAVAssetExportSession.m; sourceTree = "<group>"; };
+		17792E8522291B7000B80642 /* SDAVAssetExportSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDAVAssetExportSession.h; path = ../SDAVAssetExportSession.h; sourceTree = "<group>"; };
+		17A1D9A922291E890020AD50 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		17B38E1D222918820019707B /* SDAVAssetExportSession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDAVAssetExportSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		17B38E29222918D60019707B /* SDAVAssetExportSessionFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAVAssetExportSessionFramework.h; sourceTree = "<group>"; };
 		17B38E2A222918D60019707B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -30,22 +31,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		17792E8422291B6900B80642 /* SDAVAssetExportSession */ = {
-			isa = PBXGroup;
-			children = (
-				17792E8522291B7000B80642 /* SDAVAssetExportSession.h */,
-				17792E8322291B6900B80642 /* SDAVAssetExportSession.m */,
-			);
-			name = SDAVAssetExportSession;
-			path = SDAVAssetExportSession.xcodeproj;
-			sourceTree = "<group>";
-		};
 		17B38E13222918820019707B = {
 			isa = PBXGroup;
 			children = (
+				17A1D9A922291E890020AD50 /* File.swift */,
 				17B38E2A222918D60019707B /* Info.plist */,
-				17B38E29222918D60019707B /* SDAVAssetExportSessionFramework.h */,
-				17792E8422291B6900B80642 /* SDAVAssetExportSession */,
+				17792E8522291B7000B80642 /* SDAVAssetExportSession.h */,
+				17792E8322291B6900B80642 /* SDAVAssetExportSession.m */,
 				17B38E1E222918820019707B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,7 +58,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				17792E8622291B7000B80642 /* SDAVAssetExportSession.h in Headers */,
-				17B38E30222918D70019707B /* SDAVAssetExportSessionFramework.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +93,7 @@
 				TargetAttributes = {
 					17B38E1C222918820019707B = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -137,6 +129,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17A1D9A422291DA70020AD50 /* SDAVAssetExportSession.m in Sources */,
+				17A1D9AA22291E890020AD50 /* File.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +262,7 @@
 		17B38E26222918820019707B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -285,6 +280,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.boards-and-more.SDAVAssetExportSession";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -293,6 +289,7 @@
 		17B38E27222918820019707B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

@@ -13,6 +13,12 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
+//! Project version number for SDAVAssetExportSession.
+FOUNDATION_EXPORT double SDAVAssetExportSessionVersionNumber;
+
+//! Project version string for SDAVAssetExportSession.
+FOUNDATION_EXPORT const unsigned char SDAVAssetExportSessionVersionString[];
+
 @protocol SDAVAssetExportSessionDelegate;
 
 
